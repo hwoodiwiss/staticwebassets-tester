@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>$(RootNamespace).Cli</RootNamespace>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>testswa</ToolCommandName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console.Cli" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StaticWebAssetsTester.Core\StaticWebAssetsTester.Core.csproj" />
+  </ItemGroup>
+</Project>

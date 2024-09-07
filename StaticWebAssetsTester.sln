@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2C3FE406-6F99-4E27-8959-86DE3D66ECEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticWebAssetsTester.Core", "src\StaticWebAssetsTester.Core\StaticWebAssetsTester.Core.csproj", "{27CC41D4-B05F-4CB3-9076-5BC5C8F689B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaticWebAssetsTester.Cli", "src\StaticWebAssetsTester.Cli\StaticWebAssetsTester.Cli.csproj", "{74C0CF6E-B158-456C-AB54-D2861FB7B9DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D324CC90-3C93-4D02-87AF-C60E945678C5}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{B5F45CC8-F776-4303-9009-AF39539E38B6}"
+	ProjectSection(SolutionItems) = preProject
+		build\build.ps1 = build\build.ps1
+		build\publish-aot.ps1 = build\publish-aot.ps1
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27CC41D4-B05F-4CB3-9076-5BC5C8F689B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27CC41D4-B05F-4CB3-9076-5BC5C8F689B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27CC41D4-B05F-4CB3-9076-5BC5C8F689B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27CC41D4-B05F-4CB3-9076-5BC5C8F689B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74C0CF6E-B158-456C-AB54-D2861FB7B9DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74C0CF6E-B158-456C-AB54-D2861FB7B9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74C0CF6E-B158-456C-AB54-D2861FB7B9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74C0CF6E-B158-456C-AB54-D2861FB7B9DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27CC41D4-B05F-4CB3-9076-5BC5C8F689B4} = {2C3FE406-6F99-4E27-8959-86DE3D66ECEE}
+		{74C0CF6E-B158-456C-AB54-D2861FB7B9DD} = {2C3FE406-6F99-4E27-8959-86DE3D66ECEE}
+	EndGlobalSection
+EndGlobal

@@ -14,7 +14,7 @@ public sealed class StaticWebAssetsTester(HttpClient httpClient, string manifest
 
         _workerThread = new Thread(() => ThreadWorker(manifest, channel));
         _workerThread.Start();
-        
+
         return channel.Reader.ReadAllAsync();
     }
 
@@ -27,22 +27,25 @@ public sealed class StaticWebAssetsTester(HttpClient httpClient, string manifest
             });
             channel.Writer.Complete();
         },
-        () =>
+        (ex) =>
         {
+            Console.WriteLine("An error occured, closing the channel");
+            Console.WriteLine($"Type - {ex.GetType().Name}");
+            Console.WriteLine(ex.Message);
             channel.Writer.Complete();
         });
-    
-    private static async Task CreateExceptionSafeTask(Func<Task> asyncProc, Action failureHandler)
+
+    private static async Task CreateExceptionSafeTask(Func<Task> asyncProc, Action<Exception> failureHandler)
     {
         try
         {
             await asyncProc();
         }
-        finally
+        catch(Exception ex)
         {
-            failureHandler();
+            failureHandler(ex);
         }
-    }    
+    }
     private async Task TestPathAsync(string path, ChannelWriter<ResultDetails> resultWriter)
     {
         var uriBuilder = new UriBuilder(uri)
